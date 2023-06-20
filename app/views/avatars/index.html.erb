@@ -1,5 +1,26 @@
-<h1>Avatars#index</h1>
+<h1>Registro de Imágenes</h1>
 
-<% @imagenes.each do |url| %>
-    <%= image_tag url.url_image, size: "100x100" %>
+<%= form_with url: '/avatars/create', model: @image, method: :post do |form| %>
+
+    <div class="col-4">
+        <div>
+            <%= form.label :title, "Título", class: "form-label" %>
+            <%= form.text_field :title, name: "image[title]", class: "form-control" %> 
+        </div>
+
+        <div>
+            <%= form.label :description, "Descripcion", class: "form-label" %>
+            <%= form.text_field :description, name: "image[description]", class: "form-control" %> 
+        </div>
+
+        <div>
+            <%= form.label :url_image, "Url", class: "form-label" %>
+            <%= form.text_field :url_image, name: "image[url_image]", class: "form-control" %> 
+        </div>
+        
+        <div>
+            <br>
+            <%= form.submit "Enviar" , class: "btn btn-primary"  %>
+        </div>
+    </div>
 <% end %>

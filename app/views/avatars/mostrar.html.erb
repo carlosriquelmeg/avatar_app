@@ -1,0 +1,11 @@
+<h1>Mostrando Imágenes</h1>
+
+<% @imagenes.each do |url| %>
+<div class="card mb-3">
+    <div class="card-body text-white card1">
+    <h2 class="card-title"><%= url.title %></h2>
+     <%= image_tag url.url_image, size: "100x100" %>
+     <p class="card-text">Descripción: <%= url.description %></p>
+    </div>
+</div>
+<% end %>

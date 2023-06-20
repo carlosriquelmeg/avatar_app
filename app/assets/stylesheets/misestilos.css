@@ -1,0 +1,10 @@
+
+.card1{
+    background-color: #252525;
+}
+
+.card1:hover{
+    background-color: #ae8fdb ;
+    /* transform: scale(1.1); */
+}
+
